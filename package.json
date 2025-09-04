@@ -20,6 +20,8 @@
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
+		"@internationalized/date": "^3.9.0",
+		"@lucide/svelte": "^0.515.0",
 		"@sveltejs/adapter-auto": "^6.0.0",
 		"@sveltejs/adapter-cloudflare": "^7.2.3",
 		"@sveltejs/kit": "^2.22.0",
@@ -27,6 +29,8 @@
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.0.0",
 		"@vitest/browser": "^3.2.3",
+		"bits-ui": "^2.9.6",
+		"clsx": "^2.1.1",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
@@ -38,7 +42,10 @@
 		"prettier-plugin-tailwindcss": "^0.6.11",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
+		"tailwind-merge": "^3.3.1",
+		"tailwind-variants": "^1.0.0",
 		"tailwindcss": "^4.0.0",
+		"tw-animate-css": "^1.3.8",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^7.0.4",
@@ -48,7 +55,16 @@
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
-			"esbuild"
+			"esbuild",
+			"sharp",
+			"workerd"
 		]
+	},
+	"dependencies": {
+		"airtable-ts": "^1.6.2",
+		"front-matter": "^4.0.2",
+		"isomorphic-dompurify": "^2.26.0",
+		"marked": "^16.2.1",
+		"mode-watcher": "^1.1.0"
 	}
 }

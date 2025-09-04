@@ -11,7 +11,7 @@
 	<ul>
 		{#each submissions as submission}
 			<li>
-				<Link href={submission.githubLink}>{submission.projectName}</Link>: {submission.description}
+				<Link href={`projects/${submission.id}`}>{submission.projectName}</Link>: {submission.description}
 			</li>
 		{/each}
 	</ul>
