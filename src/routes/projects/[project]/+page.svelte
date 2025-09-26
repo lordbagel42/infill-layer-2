@@ -30,6 +30,7 @@
 			/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g,
 			(_, alt, relPath) => {
 				const absolute = rawUrlBase + relPath;
+				console.log(`Replacing ![${alt}](${relPath}) with ![${alt}](${absolute})`);
 				return `![${alt}](${absolute})`;
 			}
 		);

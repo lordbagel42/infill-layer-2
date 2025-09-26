@@ -3,27 +3,33 @@
 import type { Item, Table } from 'airtable-ts';
 
 export interface Submission extends Item {
-  id: string,
-  projectName: string | null, // Original field: "Project Name"
-  creator: string | null, // Original field: "Creator"
-  description: string | null, // Original field: "Description"
-  githubLink: string | null, // Original field: "Github Link"
+	id: string;
+	name: string | null; // Original field: "Name"
+	notes: string | null; // Original field: "Notes"
+	assignee: string | null; // Original field: "Assignee"
+	status: string | null; // Original field: "Status"
+	attachments: string[]; // Original field: "Attachments"
+	attachmentSummary: string | null; // Original field: "Attachment Summary"
 }
 
 export const submissionsTable: Table<Submission> = {
-  name: 'Submissions',
-  baseId: 'appnBo5fTRIovW4tQ',
-  tableId: 'tblGiCzHhbCUcQk6H',
-  mappings: {
-    projectName: 'fldcldZ4a6dsGsPDx', // Original field: "Project Name"
-    creator: 'fldcy1VuO81xgeFzL', // Original field: "Creator"
-    description: 'fldd5h6U3cZ5PHRN9', // Original field: "Description"
-    githubLink: 'fld8e8C8iVtmvKCCg', // Original field: "Github Link"
-  },
-  schema: {
-    projectName: 'string | null',
-    creator: 'string | null',
-    description: 'string | null',
-    githubLink: 'string | null',
-  },
+	name: 'Submissions',
+	baseId: 'appnBo5fTRIovW4tQ',
+	tableId: 'tblxI40KBfNcbield',
+	mappings: {
+		name: 'fldq7TR98G3gFQEov', // Original field: "Name"
+		notes: 'fld6NUbK3MsMZw7vw', // Original field: "Notes"
+		assignee: 'fldNYxLSuniXohPp9', // Original field: "Assignee"
+		status: 'fldPaHYDzpMNkPArx', // Original field: "Status"
+		attachments: 'fldinLMW4YFa5cqV0', // Original field: "Attachments"
+		attachmentSummary: 'fldxW3YpU08xrD3W3' // Original field: "Attachment Summary"
+	},
+	schema: {
+		name: 'string | null',
+		notes: 'string | null',
+		assignee: 'string | null',
+		status: 'string | null',
+		attachments: 'string[]',
+		attachmentSummary: 'string | null'
+	}
 };
